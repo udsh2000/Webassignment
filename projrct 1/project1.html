@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Puzzle Land</title>
+    <link rel="stylesheet" href="project1.css">
+</head>
+<body>
+    <h1>Happy Puzzle Land 🧩</h1>
+
+    <label>Upload Image: <input type="file" id="imageUpload" accept="image/*"></label><br><br>
+
+    <label>Choose Difficulty:
+        <select id="gridSize">
+            <option value="3">3 x 3 (Easy)</option>
+            <option value="4">4 x 4 (Medium)</option>
+            <option value="5">5 x 5 (Hard)</option>
+        </select>
+    </label><br><br>
+
+    <p>Preview:</p>
+    <div id="preview-container">
+        <img id="previewImage" src="https://picsum.photos/300" alt="Preview">
+    </div>
+
+    <p>Time: <span id="timer">0</span>s | Best: <span id="bestTime">--</span>s</p>
+    <p>Moves: <span id="moves">0</span></p>
+
+    <div id="puzzle-container"></div>
+
+    <button id="shuffleBtn">Shuffle</button>
+    <p id="message"></p>
+
+    <!-- Sound effects -->
+    <audio id="moveSound" src="https://www.soundjay.com/button/sounds/button-16.mp3"></audio>
+    <audio id="winSound" src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3"></audio>
+
+    <script src="project1.js"></script>
+</body>
+</html>
