@@ -1,0 +1,112 @@
+/* ========== Base ========== */
+:root{
+  --bg: #0b1020;
+  --surface: #111731;
+  --text: #e7e9f3;
+  --muted: #b2b9cf;
+  --brand: #7c3aed;
+  --brand-2: #06b6d4;
+  --card: #0f1429;
+  --ring: rgba(124,58,237,.45);
+}
+:root.light {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --brand: #7c3aed;
+  --brand-2: #06b6d4;
+  --card: #ffffff;
+  --ring: rgba(124,58,237,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(124,58,237,.15), transparent 50%),
+              radial-gradient(800px 400px at 90% 10%, rgba(6,182,212,.12), transparent 50%),
+              var(--bg);
+  line-height:1.6;
+}
+
+img{max-width:100%; display:block}
+.container{width:min(1100px, 92%); margin-inline:auto}
+.section{padding: clamp(3rem, 5vw, 5rem) 0}
+.section.alt{background: linear-gradient(180deg, transparent, rgba(255,255,255,0.02) 20%, transparent 80%)}
+.section-head{margin-bottom:2rem}
+h1,h2,h3{line-height:1.2; margin:0 0 .6rem}
+h1.headline{font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 800}
+p{margin:0 0 1rem}
+.muted{color:var(--muted)}
+.tiny{font-size:.85rem}
+.eyebrow{letter-spacing:.2em; text-transform:uppercase; color:var(--brand-2); font-weight:700; font-size:.85rem}
+.tagline{font-weight:600}
+.summary{max-width: 45ch}
+
+.btn{display:inline-block; padding:.9rem 1.1rem; border-radius: 14px; border:1px solid transparent; text-decoration:none; color:var(--text); font-weight:600; transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease}
+.btn:hover{transform: translateY(-1px)}
+.btn.primary{background: linear-gradient(90deg, var(--brand), var(--brand-2)); box-shadow:0 10px 30px rgba(124,58,237,.25)}
+.btn.ghost{background: transparent; border-color: rgba(255,255,255,.15)}
+.btn.small{padding:.55rem .8rem; border-radius:12px; font-size:.95rem}
+.btn-link{background:none;border:none;color:var(--text);cursor:pointer;font:inherit}
+
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;color:#000;padding:.5rem 1rem;border-radius:8px}
+
+.site-header{position:sticky; top:0; z-index:10; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg) 90%, transparent)}
+.nav{display:flex;align-items:center;justify-content:space-between; padding:.8rem 0}
+.brand{display:flex;align-items:center;gap:.6rem; text-decoration:none; color:var(--text); font-weight:800; letter-spacing:.02em}
+.brand-logo{display:grid;place-items:center; width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:white}
+.nav-links{display:flex; gap:1rem; align-items:center; list-style:none; margin:0; padding:0}
+.nav-links a{color:var(--text); text-decoration:none; font-weight:600; padding:.5rem .7rem; border-radius:10px}
+.nav-links a:hover{background: rgba(255,255,255,.06)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer}
+.nav-toggle .bar{display:block;width:22px;height:2px;background:var(--text);margin:4px 0;border-radius:2px}
+
+.hero{padding-top: clamp(2rem, 4vw, 4rem)}
+.hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap: clamp(1.5rem, 4vw, 3rem); align-items:center}
+.hero-visual .avatar{width:min(340px, 80%); margin-inline:auto; filter: drop-shadow(0 30px 50px rgba(0,0,0,.35))}
+.cta-row{display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem}
+.scroll-indicator{text-align:center; opacity:.6; font-size:.9rem; margin-top:2rem; animation: float 2.4s ease-in-out infinite}
+@keyframes float{50%{transform: translateY(-6px)}}
+
+.two-col{display:grid; grid-template-columns: 1.2fr .8fr; gap: clamp(1.2rem, 4vw, 2rem); align-items:start}
+.about-card, .contact-card{background: var(--card); border:1px solid rgba(255,255,255,.06); padding:1.2rem 1.2rem; border-radius:18px; box-shadow: 0 10px 30px rgba(0,0,0,.15)}
+.about-card dl{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1rem; margin:0}
+
+.project-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:1.2rem}
+.card{background: var(--card); border:1px solid rgba(255,255,255,.06); border-radius:18px; overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,.15); transition: transform .15s ease, box-shadow .15s ease}
+.card:hover{transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,.25)}
+.project-thumb{aspect-ratio: 16/9; width:100%; object-fit: cover; background: linear-gradient(135deg, var(--brand), var(--brand-2))}
+.card-body{padding:1rem 1.1rem}
+.tech{font-weight:600; color: var(--brand-2)}
+
+.skill-list{display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:.6rem; padding:0; list-style:none}
+.skill-list li{background: var(--card); border:1px solid rgba(255,255,255,.06); padding:.8rem 1rem; border-radius:14px; font-weight:600}
+
+.contact-form{display:grid; gap:.9rem}
+.field{display:grid; gap:.35rem}
+label{font-weight:700}
+input, textarea{background: var(--surface); color:var(--text); border:1px solid rgba(255,255,255,.12); border-radius:12px; padding:.8rem 1rem; outline:none}
+input:focus, textarea:focus{box-shadow: 0 0 0 4px var(--ring); border-color:transparent}
+.error{color:#fca5a5; min-height:1.2em}
+.actions{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.4rem}
+
+.site-footer{padding:2rem 0; border-top:1px solid rgba(255,255,255,.08)}
+.footer-grid{display:flex; justify-content:space-between; align-items:center}
+
+.to-top{color:var(--text); text-decoration:none; border:1px solid rgba(255,255,255,.15); padding:.5rem .7rem; border-radius:10px}
+.muted a{color:inherit}
+
+/* Responsive */
+@media (max-width: 860px){
+  .nav-toggle{display:block}
+  .nav-links{position:absolute; right:4%; top:66px; background:var(--card); border:1px solid rgba(255,255,255,.1); padding:.6rem; border-radius:12px; display:none; flex-direction:column; width:200px}
+  .nav-links.open{display:flex}
+  .hero-grid{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .project-grid{grid-template-columns:1fr; gap:1rem}
+  .skill-list{grid-template-columns:1fr}
+}

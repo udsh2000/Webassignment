@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Personal portfolio of a Full-Stack Developer showcasing projects, skills, and contact details." />
+  <title>Udesha Jayamini — portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-logo" aria-hidden="true">◆</span>
+        <span class="brand-text">Udesha</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle" class="btn-link" aria-label="Toggle dark mode">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="section hero" id="home" aria-label="Landing">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1 class="headline">Udesha Jayamini</h1>
+          <p class="tagline"> Full‑Stack Developer / Software Developer</p>
+          <p class="summary">
+            I build clean, performant apps and delightful user experiences. Below are a few of my favorite projects.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/udesha.jpg" alt="Abstract profile placeholder"  />
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container two-col">
+        <div>
+          <h2>About Me</h2>
+          <p>
+          I am a BICT student at Rajarata University with over 2 years of experience as a full-stack and software developer. 
+          I have worked on several projects involving front-end and back-end development.
+          </p>
+          
+          <ul class="highlights" role="list">
+            <li>🎓 BICT (Hons), Rajarata University</li>
+            <li>💼 Full‑stack roles & Software Developer </li>
+          </ul>
+          <div class="links">
+            <a class="btn small" href="assets/Professional CV Resume.pdf" download>Download CV</a>
+            <a class="btn small ghost" href="mailto:you@example.com">Hire Me</a>
+          </div>
+        </div>
+        <aside class="about-card" aria-label="Quick facts">
+          <h3>Quick Facts</h3>
+          <dl>
+            <dt>Location</dt><dd>Colombo, Sri Lanka</dd>
+            <dt>Roles</dt><dd>Full‑Stack, Figma</dd>
+            <dt>Interests</dt><dd> Mobile app development, Web design</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section alt" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p class="muted">A selection of work — each with a GitHub repo and (optionally) a live demo.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <article class="card project" data-animate>
+            <img class="project-thumb" src="assets/projrct 1" alt="Project 1 thumbnail" />
+            <div class="card-body">
+              <h3>Gaming Application / Happy Puzzle Land 🧩</h3>
+              <p></p>
+              <p class="tech">HTML • Java script • CSS</p>
+              <div class="card-actions">
+                <a class="btn small" href="https://github.com/udsh2000/Webassignment/commit/97af9c2289ca842341529b3d7ab599793ceb6d7d" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn small ghost" href="https://github.com/udsh2000/Webassignment/commit/97af9c2289ca842341529b3d7ab599793ceb6d7d" aria-disabled="true">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card project" data-animate>
+            <img class="project-thumb" src="assets/project2.svg" alt="Project 2 thumbnail" />
+            <div class="card-body">
+              <h3>Mobile Application</h3>
+              <p>Mobile application interface for tutorials, selling laptops. Admins manage content; notifications after orders.</p>
+              <p class="tech">figma</p>
+              <div class="card-actions">
+                <a class="btn small" href="https://www.figma.com/design/aFyR2MlxK51EL3O7nDQDqz/Untitled?node-id=1-2" target="_blank" rel="noopener">figma</a>
+                <a class="btn small ghost" href="https://www.figma.com/design/aFyR2MlxK51EL3O7nDQDqz/Untitled?node-id=1-2" aria-disabled="true">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card project" data-animate>
+            <img class="project-thumb" src="assets/project3.svg" alt="Project 3 thumbnail" />
+            <div class="card-body">
+              <h3>Hotels Booking Website / Group Project</h3>
+              <p></p>
+              <p class="tech">Wordpress • Wamp sever • MongoDB</p>
+              <div class="card-actions">
+                <a class="btn small" href="portfolio-site/assets/Project 3" target="_blank" rel="noopener">Wordpress</a>
+                <a class="btn small ghost" href="portfolio-site/assets/Project 3" aria-disabled="true">Live</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p class="muted">Tech I use regularly.</p>
+        </div>
+        <ul class="skill-list" role="list">
+          <li>HTML • CSS • JS</li>
+          <li>React • Flutter • Node</li>
+          <li>Python • OpenCV • scikit‑learn</li>
+          <li>Firebase • MongoDB • PostgreSQL</li>
+          <li>Git • GitHub • CI/CD</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section alt" id="contact">
+      <div class="container two-col">
+        <div>
+          <h2>Contact</h2>
+          <p class="muted">Use the form or reach me via the links.</p>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+              <small class="error" id="nameError"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <small class="error" id="emailError"></small>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Say hello…" required></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+            <div class="actions">
+              <button type="submit" class="btn primary">Send</button>
+              <a class="btn ghost" href="mailto:you@example.com">Email me</a>
+              <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn ghost" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <p class="muted tiny">This form is client‑side only for now.</p>
+          </form>
+        </div>
+        <aside class="contact-card" aria-label="Availability">
+          <h3>Availability</h3>
+          <p>Open to full‑stack roles and freelance projects.</p>
+          <h3>Location</h3>
+          <p>Colombo, Sri Lanka (GMT+5:30)</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Udesha Jayamini. All rights reserved.</p>
+      <a href="#" class="to-top" id="toTop" aria-label="Back to top">↑ Top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
